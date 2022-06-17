@@ -25,7 +25,10 @@ class MusicListTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "music", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "music", for: indexPath) as! MusicListViewCell
+        let track = tracks[indexPath.row]
+        cell.settingsCell(with: track)
+        
 
         return cell
     }

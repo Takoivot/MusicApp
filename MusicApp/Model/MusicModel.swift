@@ -8,12 +8,12 @@
 import Foundation
 
 struct MusicModel: Decodable {
-    let resultCount: Int
-    let results: [Tracks]
+    let resultCount: Int?
+    var results: Tracks?
 }
 
 struct Tracks: Decodable {
-    let artistName: String
-    let trackName: String
+    let artistName: String?
+    let trackName: String?
     let artworkUrl60: String?
 }
