@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+struct MusicModel {
+    let resultCount: Int
+    let results: [Tracks]
+}
+
+struct Tracks {
+    let artistName: String
+    let trackName: String
+    let artworkUrl60: String?
+}
