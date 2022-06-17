@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct MusicModel {
+struct MusicModel: Decodable {
     let resultCount: Int
     let results: [Tracks]
 }
 
-struct Tracks {
+struct Tracks: Decodable {
     let artistName: String
     let trackName: String
     let artworkUrl60: String?
