@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Search-->
         <scene sceneID="yra-iL-Asg">
             <objects>
                 <tableViewController id="mQK-1f-qVP" customClass="MusicListTableViewController" customModule="MusicApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -66,7 +66,7 @@
                             <outlet property="delegate" destination="mQK-1f-qVP" id="PzS-B7-Haf"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Wvc-xn-OHM"/>
+                    <navigationItem key="navigationItem" title="Search" id="Wvc-xn-OHM"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nJ8-ho-gtT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
