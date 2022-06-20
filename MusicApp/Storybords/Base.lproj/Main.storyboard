@@ -29,17 +29,17 @@
                                                 <constraint firstAttribute="width" constant="99" id="MEF-oE-Yum"/>
                                             </constraints>
                                         </imageView>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="4rf-EC-ii6">
-                                            <rect key="frame" x="154" y="22.5" width="43.5" height="54.5"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="4rf-EC-ii6">
+                                            <rect key="frame" x="130" y="11" width="159" height="51.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4ki-ip-qt3">
-                                                    <rect key="frame" x="0.0" y="0.0" width="43.5" height="21.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="159" height="21.5"/>
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qwm-nC-cqe">
-                                                    <rect key="frame" x="0.0" y="36.5" width="43.5" height="18"/>
+                                                    <rect key="frame" x="0.0" y="33.5" width="159" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -48,11 +48,12 @@
                                         </stackView>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="4rf-EC-ii6" secondAttribute="trailing" constant="15" id="AB8-2w-mfH"/>
                                         <constraint firstItem="XIU-eE-Gj4" firstAttribute="leading" secondItem="3Hs-6H-emC" secondAttribute="leading" constant="16" id="AlF-Hv-ypd"/>
                                         <constraint firstItem="XIU-eE-Gj4" firstAttribute="top" secondItem="3Hs-6H-emC" secondAttribute="top" id="ILj-AM-3Xt"/>
-                                        <constraint firstItem="4rf-EC-ii6" firstAttribute="leading" secondItem="XIU-eE-Gj4" secondAttribute="trailing" constant="39" id="gUq-fU-heT"/>
+                                        <constraint firstItem="4rf-EC-ii6" firstAttribute="leading" secondItem="XIU-eE-Gj4" secondAttribute="trailing" constant="15" id="RIP-jy-aOm"/>
+                                        <constraint firstItem="4rf-EC-ii6" firstAttribute="top" secondItem="3Hs-6H-emC" secondAttribute="top" constant="11" id="YWf-Vc-i0z"/>
                                         <constraint firstItem="XIU-eE-Gj4" firstAttribute="centerY" secondItem="3Hs-6H-emC" secondAttribute="centerY" id="qdl-ld-5B6"/>
-                                        <constraint firstItem="4rf-EC-ii6" firstAttribute="centerY" secondItem="3Hs-6H-emC" secondAttribute="centerY" id="trW-mS-c0H"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
