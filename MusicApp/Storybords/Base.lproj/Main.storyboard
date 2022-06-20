@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VtA-Ex-VWH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bw1-1R-oBe">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -23,14 +23,23 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oto-eZ-JBV">
+                                            <rect key="frame" x="5" y="5" width="310" height="89"/>
+                                            <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <integer key="value" value="20"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XIU-eE-Gj4">
-                                            <rect key="frame" x="16" y="0.0" width="99" height="99"/>
+                                            <rect key="frame" x="16" y="10" width="99" height="79"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="99" id="MEF-oE-Yum"/>
                                             </constraints>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="4rf-EC-ii6">
-                                            <rect key="frame" x="130" y="11" width="159" height="51.5"/>
+                                            <rect key="frame" x="130" y="15" width="159" height="51.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4ki-ip-qt3">
                                                     <rect key="frame" x="0.0" y="0.0" width="159" height="21.5"/>
@@ -50,10 +59,14 @@
                                     <constraints>
                                         <constraint firstAttribute="trailingMargin" secondItem="4rf-EC-ii6" secondAttribute="trailing" constant="15" id="AB8-2w-mfH"/>
                                         <constraint firstItem="XIU-eE-Gj4" firstAttribute="leading" secondItem="3Hs-6H-emC" secondAttribute="leading" constant="16" id="AlF-Hv-ypd"/>
-                                        <constraint firstItem="XIU-eE-Gj4" firstAttribute="top" secondItem="3Hs-6H-emC" secondAttribute="top" id="ILj-AM-3Xt"/>
+                                        <constraint firstItem="XIU-eE-Gj4" firstAttribute="top" secondItem="3Hs-6H-emC" secondAttribute="top" constant="10" id="ILj-AM-3Xt"/>
+                                        <constraint firstAttribute="bottom" secondItem="oto-eZ-JBV" secondAttribute="bottom" constant="5" id="PJ7-SH-7ok"/>
                                         <constraint firstItem="4rf-EC-ii6" firstAttribute="leading" secondItem="XIU-eE-Gj4" secondAttribute="trailing" constant="15" id="RIP-jy-aOm"/>
-                                        <constraint firstItem="4rf-EC-ii6" firstAttribute="top" secondItem="3Hs-6H-emC" secondAttribute="top" constant="11" id="YWf-Vc-i0z"/>
+                                        <constraint firstAttribute="trailing" secondItem="oto-eZ-JBV" secondAttribute="trailing" constant="5" id="X37-RX-xFc"/>
+                                        <constraint firstItem="4rf-EC-ii6" firstAttribute="top" secondItem="3Hs-6H-emC" secondAttribute="top" constant="15" id="YWf-Vc-i0z"/>
+                                        <constraint firstItem="oto-eZ-JBV" firstAttribute="top" secondItem="3Hs-6H-emC" secondAttribute="top" constant="5" id="hAq-rp-onC"/>
                                         <constraint firstItem="XIU-eE-Gj4" firstAttribute="centerY" secondItem="3Hs-6H-emC" secondAttribute="centerY" id="qdl-ld-5B6"/>
+                                        <constraint firstItem="oto-eZ-JBV" firstAttribute="leading" secondItem="3Hs-6H-emC" secondAttribute="leading" constant="5" id="uqG-b7-lEg"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -71,12 +84,13 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nJ8-ho-gtT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-264.375" y="43.309859154929576"/>
+            <point key="canvasLocation" x="279.375" y="-6.3380281690140849"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Home-->
         <scene sceneID="gcm-5f-OYZ">
             <objects>
                 <navigationController id="VtA-Ex-VWH" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" selectedImage="house.fill" id="FPI-jc-ep4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="f8W-H3-vMx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -87,12 +101,33 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mH8-PT-7aB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1048" y="45"/>
+            <point key="canvasLocation" x="-501" y="-6"/>
+        </scene>
+        <!--Tab Bar View Controller-->
+        <scene sceneID="GbY-UR-Sb2">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="bw1-1R-oBe" customClass="TabBarViewController" customModule="MusicApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4Qu-ge-eIZ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="VtA-Ex-VWH" kind="relationship" relationship="viewControllers" id="u18-fW-Isl"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DL1-KA-Cqa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-51" y="-915"/>
         </scene>
     </scenes>
     <resources>
+        <image name="house" catalog="system" width="128" height="106"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
