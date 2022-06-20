@@ -19,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D5F4C0BD2860951B00F827F2 /* MusicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F36E6205285CA1D9002AD972 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F36E6207285CA1D9002AD972 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F36E620C285CA1D9002AD972 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -29,7 +30,6 @@
 		F36E621B285CA3AD002AD972 /* MusicListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicListViewCell.swift; sourceTree = "<group>"; };
 		F36E621D285CA3C2002AD972 /* MusicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicModel.swift; sourceTree = "<group>"; };
 		F36E621F285CA3D5002AD972 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		F36E6227285CD51F002AD972 /* MusicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = MusicApp.app; path = "/Users/artursahbiev/Desktop/MusicApp/build/Debug-iphoneos/MusicApp.app"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +47,7 @@
 			isa = PBXGroup;
 			children = (
 				F36E6204285CA1D9002AD972 /* MusicApp */,
+				D5F4C0BD2860951B00F827F2 /* MusicApp.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,7 +59,7 @@
 				F36E6221285CA3E2002AD972 /* Storybords */,
 				F36E6225285CA422002AD972 /* Views */,
 				F36E6222285CA3F0002AD972 /* Model */,
-				F36E6223285CA3FA002AD972 /* Servises */,
+				F36E6223285CA3FA002AD972 /* Services */,
 				F36E6224285CA40D002AD972 /* ViewControllers */,
 				F36E620E285CA1DA002AD972 /* Assets.xcassets */,
 				F36E6213285CA1DA002AD972 /* Info.plist */,
@@ -83,12 +84,12 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		F36E6223285CA3FA002AD972 /* Servises */ = {
+		F36E6223285CA3FA002AD972 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				F36E621F285CA3D5002AD972 /* NetworkManager.swift */,
 			);
-			path = Servises;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		F36E6224285CA40D002AD972 /* ViewControllers */ = {
@@ -124,7 +125,7 @@
 			);
 			name = MusicApp;
 			productName = MusicApp;
-			productReference = F36E6227285CD51F002AD972 /* MusicApp.app */;
+			productReference = D5F4C0BD2860951B00F827F2 /* MusicApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
