@@ -29,8 +29,8 @@ class MusicListTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "music", for: indexPath) as! MusicListViewCell
-        let track = (tracks?.results[indexPath.row])!
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "music", for: indexPath) as? MusicListViewCell else {return UITableViewCell()}
+        guard let track = tracks?.results[indexPath.row] else {return UITableViewCell()}
         cell.settingsCell(with: track)
         return cell
     }
