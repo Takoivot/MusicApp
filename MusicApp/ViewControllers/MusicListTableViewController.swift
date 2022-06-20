@@ -15,7 +15,7 @@ class MusicListTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tableView.rowHeight = 100
         fetchTracksFromNM()
         setupSearchBar()
 
@@ -30,7 +30,7 @@ class MusicListTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "music", for: indexPath) as! MusicListViewCell
-        let track = tracks?.results[indexPath.row] 
+        let track = (tracks?.results[indexPath.row])!
         cell.settingsCell(with: track)
         return cell
     }
