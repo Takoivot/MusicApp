@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		D5AC6EBD2860B32F00E22C20 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AC6EBC2860B32F00E22C20 /* TabBarViewController.swift */; };
+		D5FDFAD62861F1B8000BDD02 /* PodCastListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FDFAD52861F1B8000BDD02 /* PodCastListTableViewController.swift */; };
+		D5FDFAD82861F1FC000BDD02 /* MusicStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FDFAD72861F1FC000BDD02 /* MusicStreamViewController.swift */; };
+		D5FDFADA2861F215000BDD02 /* PodCastStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FDFAD92861F215000BDD02 /* PodCastStreamViewController.swift */; };
+		D5FDFADC2861F34B000BDD02 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FDFADB2861F34B000BDD02 /* FavoritesTableViewController.swift */; };
 		F36E6206285CA1D9002AD972 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36E6205285CA1D9002AD972 /* AppDelegate.swift */; };
 		F36E6208285CA1D9002AD972 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36E6207285CA1D9002AD972 /* SceneDelegate.swift */; };
 		F36E620D285CA1D9002AD972 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F36E620B285CA1D9002AD972 /* Main.storyboard */; };
@@ -22,6 +26,10 @@
 /* Begin PBXFileReference section */
 		D5AC6EBC2860B32F00E22C20 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		D5F4C0BD2860951B00F827F2 /* MusicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5FDFAD52861F1B8000BDD02 /* PodCastListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodCastListTableViewController.swift; sourceTree = "<group>"; };
+		D5FDFAD72861F1FC000BDD02 /* MusicStreamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicStreamViewController.swift; sourceTree = "<group>"; };
+		D5FDFAD92861F215000BDD02 /* PodCastStreamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodCastStreamViewController.swift; sourceTree = "<group>"; };
+		D5FDFADB2861F34B000BDD02 /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
 		F36E6205285CA1D9002AD972 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F36E6207285CA1D9002AD972 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F36E620C285CA1D9002AD972 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -97,8 +105,12 @@
 		F36E6224285CA40D002AD972 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				F36E6219285CA344002AD972 /* MusicListTableViewController.swift */,
 				D5AC6EBC2860B32F00E22C20 /* TabBarViewController.swift */,
+				F36E6219285CA344002AD972 /* MusicListTableViewController.swift */,
+				D5FDFAD72861F1FC000BDD02 /* MusicStreamViewController.swift */,
+				D5FDFAD52861F1B8000BDD02 /* PodCastListTableViewController.swift */,
+				D5FDFAD92861F215000BDD02 /* PodCastStreamViewController.swift */,
+				D5FDFADB2861F34B000BDD02 /* FavoritesTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -182,8 +194,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5FDFAD82861F1FC000BDD02 /* MusicStreamViewController.swift in Sources */,
+				D5FDFADA2861F215000BDD02 /* PodCastStreamViewController.swift in Sources */,
+				D5FDFAD62861F1B8000BDD02 /* PodCastListTableViewController.swift in Sources */,
 				F36E6220285CA3D5002AD972 /* NetworkManager.swift in Sources */,
 				F36E621A285CA344002AD972 /* MusicListTableViewController.swift in Sources */,
+				D5FDFADC2861F34B000BDD02 /* FavoritesTableViewController.swift in Sources */,
 				F36E6206285CA1D9002AD972 /* AppDelegate.swift in Sources */,
 				F36E621C285CA3AD002AD972 /* MusicListViewCell.swift in Sources */,
 				D5AC6EBD2860B32F00E22C20 /* TabBarViewController.swift in Sources */,

@@ -36,6 +36,10 @@ class MusicListTableViewController: UITableViewController {
         guard let track = tracks?.results[indexPath.row] else {return UITableViewCell()}
         cell.settingsCell(with: track)
         cell.backgroundColor = .black
+//        Сделал чтобы по клику на ячейку фон вокруг нее оставался черным, а не серым
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = .black
+        cell.selectedBackgroundView = backgroundView
         return cell
     }
     
