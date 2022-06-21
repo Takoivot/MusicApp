@@ -15,6 +15,7 @@ class MusicListViewCell: UITableViewCell {
     func settingsCell(with track: Tracks ){
         artistName.text = track.artistName
         songName.text = track.trackName
+        
     }
 }
 
