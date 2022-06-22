@@ -35,10 +35,10 @@ class MusicListTableViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "music", for: indexPath) as? MusicListViewCell else {return UITableViewCell()}
         guard let track = tracks?.results[indexPath.row] else {return UITableViewCell()}
         cell.settingsCell(with: track)
-        cell.backgroundColor = .black
+        cell.backgroundColor = #colorLiteral(red: 0.9254901961, green: 0.8352941176, blue: 0.7333333333, alpha: 1)
 //        Сделал чтобы по клику на ячейку фон вокруг нее оставался черным, а не серым
         let backgroundView = UIView()
-        backgroundView.backgroundColor = .black
+        backgroundView.backgroundColor = #colorLiteral(red: 0.9254901961, green: 0.8352941176, blue: 0.7333333333, alpha: 1)
         cell.selectedBackgroundView = backgroundView
         return cell
     }
@@ -69,11 +69,11 @@ extension MusicListTableViewController : UISearchBarDelegate{
         searchController.searchBar.delegate = self
     }
     private func configureNavBar() {
+        tableView.backgroundColor = #colorLiteral(red: 0.9254901961, green: 0.8352941176, blue: 0.7333333333, alpha: 1)
         let appearance = UINavigationBarAppearance()
-        appearance.backgroundColor = .black
-        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-        navigationController?.navigationBar.barStyle = .black
+        appearance.backgroundColor = #colorLiteral(red: 0.662745098, green: 0.7529411765, blue: 0.8862745098, alpha: 1)
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.black]
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.black]
         navigationController?.navigationBar.standardAppearance = appearance
         navigationController?.navigationBar.compactAppearance = appearance
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
