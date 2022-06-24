@@ -17,7 +17,10 @@ enum NetworkError: Error {
 class NetworkManager {
      static let shared = NetworkManager()
     
-    /*private let urlString = "https://itunes.apple.com/search?term=jack+johnson&limit=10"
+    /*
+     !!!!!! FOR DELETE !!!!!!!!
+     
+     private let urlString = "https://itunes.apple.com/search?term=jack+johnson&limit=10"
         
     func fetchTracks(completion: @escaping (Result<MusicModel,NetworkError>) -> Void){
         guard let url = URL(string: urlString) else {
@@ -38,6 +41,7 @@ class NetworkManager {
             }
         }.resume()
     }
+    !!!!!! FOR DELETE !!!!!!!!
     */
     
     func fetchImage(with track: Tracks, completion: @escaping (Result<Data,NetworkError>) -> Void){
