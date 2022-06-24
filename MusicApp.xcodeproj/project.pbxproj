@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D52F6FC82865675C0073F6AD /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52F6FC72865675C0073F6AD /* UIButtonExtension.swift */; };
 		D54F6FF22862C9F700CCC0C9 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54F6FF12862C9F700CCC0C9 /* UIColorExtension.swift */; };
 		D54F6FF42863025400CCC0C9 /* FavoritesStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54F6FF32863025400CCC0C9 /* FavoritesStreamViewController.swift */; };
 		D5AC6EBD2860B32F00E22C20 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AC6EBC2860B32F00E22C20 /* TabBarViewController.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D52F6FC72865675C0073F6AD /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		D54F6FF12862C9F700CCC0C9 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		D54F6FF32863025400CCC0C9 /* FavoritesStreamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesStreamViewController.swift; sourceTree = "<group>"; };
 		D5AC6EBC2860B32F00E22C20 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			children = (
 				F36E621B285CA3AD002AD972 /* MusicListViewCell.swift */,
 				D54F6FF12862C9F700CCC0C9 /* UIColorExtension.swift */,
+				D52F6FC72865675C0073F6AD /* UIButtonExtension.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 				D5AC6EBD2860B32F00E22C20 /* TabBarViewController.swift in Sources */,
 				F36E621E285CA3C2002AD972 /* MusicModel.swift in Sources */,
 				F36E6208285CA1D9002AD972 /* SceneDelegate.swift in Sources */,
+				D52F6FC82865675C0073F6AD /* UIButtonExtension.swift in Sources */,
 				D54F6FF42863025400CCC0C9 /* FavoritesStreamViewController.swift in Sources */,
 				D54F6FF22862C9F700CCC0C9 /* UIColorExtension.swift in Sources */,
 			);

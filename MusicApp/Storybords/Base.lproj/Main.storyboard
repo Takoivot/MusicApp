@@ -11,7 +11,6 @@
         <!--Music-->
         <scene sceneID="yra-iL-Asg">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nJ8-ho-gtT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="mQK-1f-qVP" customClass="MusicListTableViewController" customModule="MusicApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="VKI-LO-Pdz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -85,6 +84,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Music" id="Wvc-xn-OHM"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nJ8-ho-gtT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="754" y="-5"/>
         </scene>
@@ -107,7 +107,6 @@
         <!--Music-->
         <scene sceneID="gcm-5f-OYZ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mH8-PT-7aB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="VtA-Ex-VWH" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Music" image="music.note.house" catalog="system" selectedImage="music.note.house.fill" id="FPI-jc-ep4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="f8W-H3-vMx">
@@ -121,13 +120,13 @@
                         <segue destination="mQK-1f-qVP" kind="relationship" relationship="rootViewController" id="040-LC-Sz7"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mH8-PT-7aB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-53" y="-5"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="GbY-UR-Sb2">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DL1-KA-Cqa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="bw1-1R-oBe" customClass="TabBarViewController" customModule="MusicApp" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4Qu-ge-eIZ">
@@ -140,14 +139,14 @@
                         <segue destination="d9L-Qg-Jgm" kind="relationship" relationship="viewControllers" id="6kl-0c-4JO"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DL1-KA-Cqa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1622" y="-950"/>
         </scene>
         <!--Favorites-->
         <scene sceneID="dO2-zN-kdR">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ndf-hZ-QPz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tableViewController id="FzP-uW-xbx" customClass="FavoritesTableViewController" customModule="MusicApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Favorites" id="FzP-uW-xbx" customClass="FavoritesTableViewController" customModule="MusicApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Lnh-Bt-q01">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -220,6 +219,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Favorites" id="0Mj-YH-XaM"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ndf-hZ-QPz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3813.75" y="-951.76056338028172"/>
         </scene>
@@ -355,12 +355,14 @@
             </objects>
             <point key="canvasLocation" x="2349" y="-5"/>
         </scene>
-        <!--Favorites-->
+        <!--Navigation Controller-->
         <scene sceneID="C0s-Wy-taU">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P1B-lu-3SU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ypp-6r-0TD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Favorites" image="star" catalog="system" selectedImage="star.fill" id="F6U-pi-ChM"/>
+                    <tabBarItem key="tabBarItem" title="" id="F6U-pi-ChM"/>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="9I2-f8-BpG"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="fE4-Xi-qV5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -370,7 +372,6 @@
                         <segue destination="FzP-uW-xbx" kind="relationship" relationship="rootViewController" id="g8S-8u-EcH"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="P1B-lu-3SU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2816.25" y="-951.76056338028172"/>
         </scene>
@@ -380,8 +381,6 @@
         <image name="mic.fill" catalog="system" width="108" height="128"/>
         <image name="music.note.house" catalog="system" width="128" height="106"/>
         <image name="music.note.house.fill" catalog="system" width="128" height="106"/>
-        <image name="star" catalog="system" width="128" height="116"/>
-        <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
