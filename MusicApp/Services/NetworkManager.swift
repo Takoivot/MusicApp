@@ -38,6 +38,22 @@ class NetworkManager {
         }.resume()
     }
     
+    func fetchImage(with track: Tracks, completion: @escaping (Result<Data,NetworkError>) -> Void){
+        DispatchQueue.global().async {
+            guard let url = URL(string: track.artworkUrl60 ?? "" ) else {
+                completion(.failure(.invalidURL))
+                return
+            }
+            if let imageData = try? Data(contentsOf: url){
+                completion(.success(imageData))
+                return
+            } else {
+                completion(.failure(.invalidData))
+                return
+            }
+        }
+    }
+    
     private init() {}
     
 }
