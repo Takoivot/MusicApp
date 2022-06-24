@@ -48,7 +48,9 @@ class MusicListTableViewController: UITableViewController {
 }
 
 extension MusicListTableViewController {
-    /*func fetchTracksFromNM(){
+    /*
+     !!!!!! FOR DELETE !!!!!!!!
+     func fetchTracksFromNM(){
         NetworkManager.shared.f { result in
             switch result {
             case .success(let tracks):
@@ -61,6 +63,7 @@ extension MusicListTableViewController {
             }
         }
     }
+     !!!!!! FOR DELETE !!!!!!!!
      */
    
 }
@@ -73,9 +76,9 @@ extension MusicListTableViewController : UISearchBarDelegate{
         searchController.searchBar.delegate = self
     }
     private func configureNavBar() {
-        tableView.backgroundColor = #colorLiteral(red: 0.9254901961, green: 0.8352941176, blue: 0.7333333333, alpha: 1)
+        tableView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         let appearance = UINavigationBarAppearance()
-        appearance.backgroundColor = #colorLiteral(red: 0.662745098, green: 0.7529411765, blue: 0.8862745098, alpha: 1)
+        appearance.backgroundColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
         appearance.titleTextAttributes = [.foregroundColor: UIColor.black]
         appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.black]
         navigationController?.navigationBar.standardAppearance = appearance
