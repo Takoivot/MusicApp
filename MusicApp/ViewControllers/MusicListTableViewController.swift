@@ -19,7 +19,7 @@ class MusicListTableViewController: UITableViewController {
         super.viewDidLoad()
         tableView.rowHeight = 100
         tableView.separatorStyle = .none
-        fetchTracksFromNM()
+        //fetchTracksFromNM()
         setupSearchBar()
         configureNavBar()
         
@@ -48,8 +48,8 @@ class MusicListTableViewController: UITableViewController {
 }
 
 extension MusicListTableViewController {
-    func fetchTracksFromNM(){
-        NetworkManager.shared.fetchTracks { result in
+    /*func fetchTracksFromNM(){
+        NetworkManager.shared.f { result in
             switch result {
             case .success(let tracks):
                 self.tracks = tracks
@@ -61,6 +61,8 @@ extension MusicListTableViewController {
             }
         }
     }
+     */
+   
 }
 
 extension MusicListTableViewController : UISearchBarDelegate{
@@ -82,6 +84,20 @@ extension MusicListTableViewController : UISearchBarDelegate{
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        timer?.invalidate()
+        timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false, block: { _ in
+            NetworkManager.shared.fetchTracksAF(searchText: searchText) {result in
+                switch result {
+                case .success(let tracks):
+                    self.tracks = tracks
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                    }
+                case .failure(let error):
+                    print(error)
+                }
+            }
+        })
       
        
     }
