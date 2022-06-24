@@ -9,24 +9,38 @@ import UIKit
 
 class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
     
-    private var middleButton: UIButton = {
-        let button = UIButton()
-        let symbol = UIImage.SymbolConfiguration(pointSize: 15, weight: .heavy, scale: .large)
-        button.setImage(UIImage(systemName: "star", withConfiguration: symbol), for: .normal)
-        button.imageView?.tintColor = .white
-        button.backgroundColor = .gray
-        return button
-    }()
+    private var middleButton = UIButton.middleButton
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setNewTabBar()
         addMiddleButton()
         hideOldTabBar()
+        hidestandartButton()
+        
     }
     
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        middleButton.backgroundColor = .gray
+        UIView.animate(withDuration: 0.15, animations: ({
+            self.middleButton.transform = CGAffineTransform(rotationAngle: 0)
+            self.middleButton.backgroundColor = .gray
+            self.middleButton.layer.borderWidth = 0
+            
+        }))
+    }
+    
+    @objc func middleButtonPressed(sender: UIButton) {
+        UIView.animate(withDuration: 0.3, animations: ({
+            self.middleButton.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 4 )
+            
+            self.middleButton.layer.borderWidth = 3
+            self.middleButton.layer.borderColor = UIColor.white.cgColor
+            self.middleButton.backgroundColor = .tabBarItemAccent
+            self.selectedIndex = 1
+            if let navVC = self.tabBarController?.viewControllers?[1] as? UINavigationController {
+                navVC.pushViewController(FavoritesTableViewController(), animated: true)
+            }
+        }))
     }
 }
 
@@ -71,19 +85,21 @@ extension TabBarViewController {
         tabBar.scrollEdgeAppearance = appearance
     }
     
-    private func addMiddleButton() {
+    private func hidestandartButton() {
         DispatchQueue.main.async {
             if let items = self.tabBar.items {
                 items[1].isEnabled = false
             }
         }
-        
+    }
+    
+    private func addMiddleButton() {
         tabBar.addSubview(middleButton)
         let size = CGFloat(50)
-        let layerHeight = CGFloat()
+        let layerHeight = CGFloat(5)
         let constant: CGFloat = 20 + ( layerHeight / 2 ) - 5
         middleButton.layer.cornerRadius = size / 2
-        
+
         let constraints = [
             middleButton.centerXAnchor.constraint(equalTo: tabBar.centerXAnchor),
             middleButton.centerYAnchor.constraint(equalTo: tabBar.topAnchor, constant: constant),
@@ -93,20 +109,16 @@ extension TabBarViewController {
         for constraint in constraints {
             constraint.isActive = true
         }
-        
+
         middleButton.layer.masksToBounds = false
         middleButton.translatesAutoresizingMaskIntoConstraints = false
-        
-        middleButton.addTarget(self, action: #selector(buttonHandler(sender:)), for: .touchUpInside)
+
+        middleButton.addTarget(self, action: #selector(middleButtonPressed), for: .touchUpInside)
     }
-    @objc func buttonHandler(sender: UIButton) {
-        middleButton.backgroundColor = .tabBarItemAccent
-        selectedIndex = 1
-        if let navVC = tabBarController?.viewControllers?[1] as? UINavigationController {
-            navVC.pushViewController(FavoritesTableViewController(), animated: true)
-        }
-    }
+    
+   
 }
+
 
 
 
