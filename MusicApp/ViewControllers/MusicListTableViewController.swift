@@ -13,6 +13,8 @@ class MusicListTableViewController: UITableViewController {
     
     let searchController = UISearchController(searchResultsController: nil)
     
+    private var timer: Timer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 100
@@ -80,6 +82,9 @@ extension MusicListTableViewController : UISearchBarDelegate{
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        let urlString = "https://itunes.apple.com/search?term=\(searchText)&limit=25"
         
+        timer?.invalidate()
+       
     }
 }
