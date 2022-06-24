@@ -34,9 +34,9 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XIU-eE-Gj4">
-                                            <rect key="frame" x="16" y="10" width="99" height="79"/>
+                                            <rect key="frame" x="16" y="10" width="79" height="79"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="99" id="MEF-oE-Yum"/>
+                                                <constraint firstAttribute="width" constant="79" id="MEF-oE-Yum"/>
                                             </constraints>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="4rf-EC-ii6">
@@ -62,7 +62,7 @@
                                         <constraint firstItem="XIU-eE-Gj4" firstAttribute="leading" secondItem="3Hs-6H-emC" secondAttribute="leading" constant="16" id="AlF-Hv-ypd"/>
                                         <constraint firstItem="XIU-eE-Gj4" firstAttribute="top" secondItem="3Hs-6H-emC" secondAttribute="top" constant="10" id="ILj-AM-3Xt"/>
                                         <constraint firstAttribute="bottom" secondItem="oto-eZ-JBV" secondAttribute="bottom" constant="5" id="PJ7-SH-7ok"/>
-                                        <constraint firstItem="4rf-EC-ii6" firstAttribute="leading" secondItem="XIU-eE-Gj4" secondAttribute="trailing" constant="15" id="RIP-jy-aOm"/>
+                                        <constraint firstItem="4rf-EC-ii6" firstAttribute="leading" secondItem="XIU-eE-Gj4" secondAttribute="trailing" constant="35" id="RIP-jy-aOm"/>
                                         <constraint firstAttribute="trailing" secondItem="oto-eZ-JBV" secondAttribute="trailing" constant="5" id="X37-RX-xFc"/>
                                         <constraint firstItem="4rf-EC-ii6" firstAttribute="top" secondItem="3Hs-6H-emC" secondAttribute="top" constant="15" id="YWf-Vc-i0z"/>
                                         <constraint firstItem="oto-eZ-JBV" firstAttribute="top" secondItem="3Hs-6H-emC" secondAttribute="top" constant="5" id="hAq-rp-onC"/>
