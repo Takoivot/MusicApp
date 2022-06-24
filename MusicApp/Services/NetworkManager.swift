@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Alamofire
 
 enum NetworkError: Error {
     case invalidURL
@@ -16,7 +17,10 @@ enum NetworkError: Error {
 class NetworkManager {
      static let shared = NetworkManager()
     
-    private let urlString = "https://itunes.apple.com/search?term=jack+johnson&limit=25"
+    /*
+     !!!!!! FOR DELETE !!!!!!!!
+     
+     private let urlString = "https://itunes.apple.com/search?term=jack+johnson&limit=10"
         
     func fetchTracks(completion: @escaping (Result<MusicModel,NetworkError>) -> Void){
         guard let url = URL(string: urlString) else {
@@ -37,6 +41,8 @@ class NetworkManager {
             }
         }.resume()
     }
+    !!!!!! FOR DELETE !!!!!!!!
+    */
     
     func fetchImage(with track: Tracks, completion: @escaping (Result<Data,NetworkError>) -> Void){
         DispatchQueue.global().async {
@@ -50,6 +56,34 @@ class NetworkManager {
             } else {
                 completion(.failure(.invalidData))
                 return
+            }
+        }
+    }
+    
+    func fetchTracksAF(searchText: String, completion: @escaping (Result<MusicModel,NetworkError>) -> Void){
+        let url = "https://itunes.apple.com/search"
+        let parameters = [
+            "term":"\(searchText)",
+            "limit":"50",
+            "media":"music"
+        ]
+        
+        AF.request(url, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: nil).responseData { (dataResponse) in
+            if let error = dataResponse.error {
+                print(error.localizedDescription)
+                completion(.failure(.invalidData))
+                return
+            }
+            
+            guard let data = dataResponse.data else {return}
+            
+            do{
+                let track = try JSONDecoder().decode(MusicModel.self, from: data)
+                completion(.success(track))
+                print(track)
+            } catch let error{
+                print(error.localizedDescription)
+                completion(.failure(.decodeError))
             }
         }
     }
