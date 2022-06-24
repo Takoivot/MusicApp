@@ -23,6 +23,18 @@ class MusicStreamViewController: UIViewController {
         configureNavBar()
     }
     
+    @IBAction func handleCurrentTimeSlider(_ sender: Any) {
+    }
+    
+    @IBAction func handleVolumeSlider(_ sender: Any) {
+    }
+    @IBAction func previousTrack(_ sender: Any) {
+    }
+    @IBAction func nextTrack(_ sender: Any) {
+    }
+    @IBAction func playPauseAction(_ sender: Any) {
+    }
+    
 }
 
 extension MusicStreamViewController {
