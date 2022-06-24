@@ -9,6 +9,15 @@ import UIKit
 
 class MusicStreamViewController: UIViewController {
     
+    
+    @IBOutlet weak var trackImage: UIImageView!
+    @IBOutlet weak var currentTimeSlider: UISlider!
+    @IBOutlet weak var currentTimeLabel: UILabel!
+    @IBOutlet weak var durationTimeLabel: UILabel!
+    @IBOutlet weak var artistName: UILabel!
+    @IBOutlet weak var trackName: UILabel!
+    @IBOutlet weak var volumeSlider: UISlider!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNavBar()
