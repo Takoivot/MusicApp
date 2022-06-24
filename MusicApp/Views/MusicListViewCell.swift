@@ -14,6 +14,9 @@ class MusicListViewCell: UITableViewCell {
     @IBOutlet var imageSong: UIImageView!
     
     func settingsCell(with track: Tracks ){
+        imageSong.layer.cornerRadius = imageSong.frame.height / 2
+        imageSong.contentMode = .scaleAspectFill
+        imageSong.layer.masksToBounds = true
         artistName.text = track.artistName
         songName.text = track.trackName
         
