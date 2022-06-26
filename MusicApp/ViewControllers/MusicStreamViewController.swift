@@ -7,7 +7,10 @@
 
 import UIKit
 
+
 class MusicStreamViewController: UIViewController {
+    
+    var track: Tracks?
     
     
     @IBOutlet weak var trackImage: UIImageView!
@@ -21,6 +24,8 @@ class MusicStreamViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNavBar()
+        settings()
+        
     }
     
     @IBAction func handleCurrentTimeSlider(_ sender: Any) {
@@ -33,6 +38,11 @@ class MusicStreamViewController: UIViewController {
     @IBAction func nextTrack(_ sender: Any) {
     }
     @IBAction func playPauseAction(_ sender: Any) {
+    }
+    
+    func settings(){
+        artistName.text = track?.artistName
+        trackName.text = track?.trackName
     }
     
 }
