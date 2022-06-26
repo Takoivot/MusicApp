@@ -13,11 +13,10 @@ class PodCastListTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.rowHeight = 100
-        tableView.separatorStyle = .none
+        TableViewSettings.shared.tuneViewAppearance(for: tableView)
+        NavBarSettings.shared.configureNavBar(for: navigationController)
         setupSearchBar()
-        configureNavBar()
-       
+        
     }
 
     // MARK: - Table view data source
@@ -38,16 +37,6 @@ extension PodCastListTableViewController : UISearchBarDelegate{
         navigationController?.navigationBar.prefersLargeTitles = true
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.delegate = self
-    }
-    private func configureNavBar() {
-        tableView.backgroundColor = #colorLiteral(red: 0.9254901961, green: 0.8352941176, blue: 0.7333333333, alpha: 1)
-        let appearance = UINavigationBarAppearance()
-        appearance.backgroundColor = #colorLiteral(red: 0.662745098, green: 0.7529411765, blue: 0.8862745098, alpha: 1)
-        appearance.titleTextAttributes = [.foregroundColor: UIColor.black]
-        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.black]
-        navigationController?.navigationBar.standardAppearance = appearance
-        navigationController?.navigationBar.compactAppearance = appearance
-        navigationController?.navigationBar.scrollEdgeAppearance = appearance
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {

@@ -12,6 +12,7 @@
 		D54F6FF22862C9F700CCC0C9 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54F6FF12862C9F700CCC0C9 /* UIColorExtension.swift */; };
 		D54F6FF42863025400CCC0C9 /* FavoritesStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54F6FF32863025400CCC0C9 /* FavoritesStreamViewController.swift */; };
 		D585C14C28687CA0006CB842 /* NavBarSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D585C14B28687CA0006CB842 /* NavBarSettings.swift */; };
+		D585C152286882C3006CB842 /* TableViewSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D585C151286882C3006CB842 /* TableViewSettings.swift */; };
 		D5AC6EBD2860B32F00E22C20 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AC6EBC2860B32F00E22C20 /* TabBarViewController.swift */; };
 		D5FDFAD62861F1B8000BDD02 /* PodCastListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FDFAD52861F1B8000BDD02 /* PodCastListTableViewController.swift */; };
 		D5FDFAD82861F1FC000BDD02 /* MusicStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FDFAD72861F1FC000BDD02 /* MusicStreamViewController.swift */; };
@@ -35,6 +36,7 @@
 		D54F6FF12862C9F700CCC0C9 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		D54F6FF32863025400CCC0C9 /* FavoritesStreamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesStreamViewController.swift; sourceTree = "<group>"; };
 		D585C14B28687CA0006CB842 /* NavBarSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarSettings.swift; sourceTree = "<group>"; };
+		D585C151286882C3006CB842 /* TableViewSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewSettings.swift; sourceTree = "<group>"; };
 		D5AC6EBC2860B32F00E22C20 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		D5F4C0BD2860951B00F827F2 /* MusicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5FDFAD52861F1B8000BDD02 /* PodCastListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodCastListTableViewController.swift; sourceTree = "<group>"; };
@@ -130,7 +132,6 @@
 			isa = PBXGroup;
 			children = (
 				F36E621F285CA3D5002AD972 /* NetworkManager.swift */,
-				D585C14B28687CA0006CB842 /* NavBarSettings.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -152,9 +153,11 @@
 		F36E6225285CA422002AD972 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D585C14B28687CA0006CB842 /* NavBarSettings.swift */,
 				F36E621B285CA3AD002AD972 /* MusicListViewCell.swift */,
 				D54F6FF12862C9F700CCC0C9 /* UIColorExtension.swift */,
 				D52F6FC72865675C0073F6AD /* UIButtonExtension.swift */,
+				D585C151286882C3006CB842 /* TableViewSettings.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				D5FDFAD62861F1B8000BDD02 /* PodCastListTableViewController.swift in Sources */,
 				F36E6220285CA3D5002AD972 /* NetworkManager.swift in Sources */,
 				F36E621A285CA344002AD972 /* MusicListTableViewController.swift in Sources */,
+				D585C152286882C3006CB842 /* TableViewSettings.swift in Sources */,
 				D5FDFADC2861F34B000BDD02 /* FavoritesTableViewController.swift in Sources */,
 				F36E6206285CA1D9002AD972 /* AppDelegate.swift in Sources */,
 				F36E621C285CA3AD002AD972 /* MusicListViewCell.swift in Sources */,
