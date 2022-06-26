@@ -78,7 +78,6 @@
 				77BCB2F22F8008C8DF360584 /* Pods-MusicApp.debug.xcconfig */,
 				F913A89ECCCF4B92B8DECE20 /* Pods-MusicApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
