@@ -12,6 +12,7 @@
 		D54F6FF42863025400CCC0C9 /* FavoritesStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54F6FF32863025400CCC0C9 /* FavoritesStreamViewController.swift */; };
 		D585C14C28687CA0006CB842 /* NavBarSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D585C14B28687CA0006CB842 /* NavBarSettings.swift */; };
 		D585C152286882C3006CB842 /* TableViewSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D585C151286882C3006CB842 /* TableViewSettings.swift */; };
+		D58967212869E224000FDB60 /* FavoriteListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58967202869E224000FDB60 /* FavoriteListViewCell.swift */; };
 		D5AC6EBD2860B32F00E22C20 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AC6EBC2860B32F00E22C20 /* TabBarViewController.swift */; };
 		D5FDFAD82861F1FC000BDD02 /* MusicStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FDFAD72861F1FC000BDD02 /* MusicStreamViewController.swift */; };
 		D5FDFADC2861F34B000BDD02 /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5FDFADB2861F34B000BDD02 /* FavoritesTableViewController.swift */; };
@@ -34,6 +35,7 @@
 		D54F6FF32863025400CCC0C9 /* FavoritesStreamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesStreamViewController.swift; sourceTree = "<group>"; };
 		D585C14B28687CA0006CB842 /* NavBarSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarSettings.swift; sourceTree = "<group>"; };
 		D585C151286882C3006CB842 /* TableViewSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewSettings.swift; sourceTree = "<group>"; };
+		D58967202869E224000FDB60 /* FavoriteListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListViewCell.swift; sourceTree = "<group>"; };
 		D5AC6EBC2860B32F00E22C20 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		D5F4C0BD2860951B00F827F2 /* MusicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5FDFAD72861F1FC000BDD02 /* MusicStreamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicStreamViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			children = (
 				D585C14B28687CA0006CB842 /* NavBarSettings.swift */,
 				F36E621B285CA3AD002AD972 /* MusicListViewCell.swift */,
+				D58967202869E224000FDB60 /* FavoriteListViewCell.swift */,
 				D54F6FF12862C9F700CCC0C9 /* UIColorExtension.swift */,
 				D585C151286882C3006CB842 /* TableViewSettings.swift */,
 			);
@@ -282,6 +285,7 @@
 				D5FDFAD82861F1FC000BDD02 /* MusicStreamViewController.swift in Sources */,
 				D585C14C28687CA0006CB842 /* NavBarSettings.swift in Sources */,
 				F36E6220285CA3D5002AD972 /* NetworkManager.swift in Sources */,
+				D58967212869E224000FDB60 /* FavoriteListViewCell.swift in Sources */,
 				F36E621A285CA344002AD972 /* MusicListTableViewController.swift in Sources */,
 				D585C152286882C3006CB842 /* TableViewSettings.swift in Sources */,
 				D5FDFADC2861F34B000BDD02 /* FavoritesTableViewController.swift in Sources */,
