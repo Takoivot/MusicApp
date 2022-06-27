@@ -13,7 +13,6 @@ class MusicStreamViewController: UIViewController {
     
     var track: Tracks?
     
-    
     @IBOutlet weak var trackImage: UIImageView!
     @IBOutlet weak var currentTimeSlider: UISlider!
     @IBOutlet weak var currentTimeLabel: UILabel!
@@ -33,9 +32,15 @@ class MusicStreamViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = #colorLiteral(red: 0.9254901961, green: 0.8352941176, blue: 0.7333333333, alpha: 1)
         NavBarSettings.shared.configureNavBar(for: navigationController)
-        settings()
         playTrack(previewUrl: track?.previewUrl)
+        settings()
         
+    }
+    
+    func settings(){
+        artistName.text = track?.artistName
+        trackName.text = track?.trackName
+        observePlayerCurrentTime()
     }
     
     private func playTrack(previewUrl: String? ) {
@@ -43,6 +48,26 @@ class MusicStreamViewController: UIViewController {
         let playerItem = AVPlayerItem(url: url)
         player.replaceCurrentItem(with: playerItem)
         player.play()
+    }
+    
+    
+    private func observePlayerCurrentTime() {
+        let interval = CMTimeMake(value: 1, timescale: 2)
+        player.addPeriodicTimeObserver(forInterval: interval, queue: .main) { [weak self] (time) in
+            self?.currentTimeLabel.text = time.toDisplayToString()
+            
+            let durationTime = self?.player.currentItem?.duration
+            let currentDurationText = ((durationTime ?? CMTimeMake(value: 1, timescale: 1 )) - time).toDisplayToString()
+            self?.durationTimeLabel.text = "-\(currentDurationText)"
+            self?.updateTimeSlider()
+        }
+    }
+    
+    private func updateTimeSlider() {
+        let currentTimeSeconds = CMTimeGetSeconds(player.currentTime())
+        let durationSeconds = CMTimeGetSeconds(player.currentItem?.duration ?? CMTimeMake(value: 1, timescale: 1))
+        let percentage = currentTimeSeconds / durationSeconds
+        self.currentTimeSlider.value = Float(percentage)
     }
     
     @IBAction func handleCurrentTimeSlider(_ sender: Any) {
@@ -64,10 +89,7 @@ class MusicStreamViewController: UIViewController {
         }
     }
     
-    func settings(){
-        artistName.text = track?.artistName
-        trackName.text = track?.trackName
-    }
+ 
     
 }
 

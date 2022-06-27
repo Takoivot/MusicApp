@@ -27,6 +27,7 @@
 		F36E621C285CA3AD002AD972 /* MusicListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36E621B285CA3AD002AD972 /* MusicListViewCell.swift */; };
 		F36E621E285CA3C2002AD972 /* MusicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36E621D285CA3C2002AD972 /* MusicModel.swift */; };
 		F36E6220285CA3D5002AD972 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36E621F285CA3D5002AD972 /* NetworkManager.swift */; };
+		F3A305952869BD5E00956560 /* CMTime + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A305942869BD5E00956560 /* CMTime + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		F36E621B285CA3AD002AD972 /* MusicListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicListViewCell.swift; sourceTree = "<group>"; };
 		F36E621D285CA3C2002AD972 /* MusicModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicModel.swift; sourceTree = "<group>"; };
 		F36E621F285CA3D5002AD972 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F3A305942869BD5E00956560 /* CMTime + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CMTime + Extension.swift"; sourceTree = "<group>"; };
 		F913A89ECCCF4B92B8DECE20 /* Pods-MusicApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicApp.release.xcconfig"; path = "Target Support Files/Pods-MusicApp/Pods-MusicApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,6 +148,7 @@
 				D5FDFAD92861F215000BDD02 /* PodCastStreamViewController.swift */,
 				D5FDFADB2861F34B000BDD02 /* FavoritesTableViewController.swift */,
 				D54F6FF32863025400CCC0C9 /* FavoritesStreamViewController.swift */,
+				F3A305962869BD6500956560 /* Helper */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -160,6 +163,14 @@
 				D585C151286882C3006CB842 /* TableViewSettings.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		F3A305962869BD6500956560 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				F3A305942869BD5E00956560 /* CMTime + Extension.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,6 +299,7 @@
 				F36E6206285CA1D9002AD972 /* AppDelegate.swift in Sources */,
 				F36E621C285CA3AD002AD972 /* MusicListViewCell.swift in Sources */,
 				D5AC6EBD2860B32F00E22C20 /* TabBarViewController.swift in Sources */,
+				F3A305952869BD5E00956560 /* CMTime + Extension.swift in Sources */,
 				F36E621E285CA3C2002AD972 /* MusicModel.swift in Sources */,
 				F36E6208285CA1D9002AD972 /* SceneDelegate.swift in Sources */,
 				D52F6FC82865675C0073F6AD /* UIButtonExtension.swift in Sources */,
