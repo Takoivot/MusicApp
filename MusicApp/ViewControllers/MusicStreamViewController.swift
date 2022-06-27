@@ -34,7 +34,6 @@ class MusicStreamViewController: UIViewController {
         view.backgroundColor = #colorLiteral(red: 0.9254901961, green: 0.8352941176, blue: 0.7333333333, alpha: 1)
         NavBarSettings.shared.configureNavBar(for: navigationController)
         settings()
-        artistName.text = track?.artistName
         playTrack(previewUrl: track?.previewUrl)
         
     }
@@ -58,10 +57,10 @@ class MusicStreamViewController: UIViewController {
     @IBAction func playPauseAction(_ sender: Any) {
         if player.timeControlStatus == .paused {
             player.play()
-            playPauseButton.setImage(UIImage(systemName: "pause"), for: .normal)
+            playPauseButton.setImage(UIImage(named: "pause"), for: .normal)
         } else {
             player.pause()
-            playPauseButton.setImage(UIImage(systemName: "play"), for: .normal)
+            playPauseButton.setImage(UIImage(named: "play"), for: .normal)
         }
     }
     
