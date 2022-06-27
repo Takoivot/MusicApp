@@ -17,11 +17,10 @@ class MusicListTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.rowHeight = 100
-        tableView.separatorStyle = .none
+        TableViewSettings.shared.tuneViewAppearance(for: tableView)
+        NavBarSettings.shared.configureNavBar(for: navigationController)
         //fetchTracksFromNM()
         setupSearchBar()
-        configureNavBar()
         
     }
     
@@ -37,11 +36,7 @@ class MusicListTableViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "music", for: indexPath) as? MusicListViewCell else {return UITableViewCell()}
         guard let track = tracks?.results[indexPath.row] else {return UITableViewCell()}
         cell.settingsCell(with: track)
-        cell.backgroundColor = #colorLiteral(red: 0.9254901961, green: 0.8352941176, blue: 0.7333333333, alpha: 1)
-//        Сделал чтобы по клику на ячейку фон вокруг нее оставался черным, а не серым
-        let backgroundView = UIView()
-        backgroundView.backgroundColor = #colorLiteral(red: 0.9254901961, green: 0.8352941176, blue: 0.7333333333, alpha: 1)
-        cell.selectedBackgroundView = backgroundView
+        TableViewSettings.shared.tuneCellAppearance(for: cell)
         return cell
     }
     
@@ -74,16 +69,6 @@ extension MusicListTableViewController : UISearchBarDelegate{
         navigationController?.navigationBar.prefersLargeTitles = true
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.delegate = self
-    }
-    private func configureNavBar() {
-        tableView.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        let appearance = UINavigationBarAppearance()
-        appearance.backgroundColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
-        appearance.titleTextAttributes = [.foregroundColor: UIColor.black]
-        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.black]
-        navigationController?.navigationBar.standardAppearance = appearance
-        navigationController?.navigationBar.compactAppearance = appearance
-        navigationController?.navigationBar.scrollEdgeAppearance = appearance
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
