@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVKit
 
 
 class MusicStreamViewController: UIViewController {
@@ -20,13 +21,29 @@ class MusicStreamViewController: UIViewController {
     @IBOutlet weak var artistName: UILabel!
     @IBOutlet weak var trackName: UILabel!
     @IBOutlet weak var volumeSlider: UISlider!
+    @IBOutlet weak var playPauseButton: UIButton!
+    
+    let player: AVPlayer = {
+        let avPlayer = AVPlayer()
+        avPlayer.automaticallyWaitsToMinimizeStalling = false
+        return avPlayer
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = #colorLiteral(red: 0.9254901961, green: 0.8352941176, blue: 0.7333333333, alpha: 1)
         NavBarSettings.shared.configureNavBar(for: navigationController)
         settings()
+        artistName.text = track?.artistName
+        playTrack(previewUrl: track?.previewUrl)
         
+    }
+    
+    private func playTrack(previewUrl: String? ) {
+        guard let url = URL(string: previewUrl ?? "") else {return}
+        let playerItem = AVPlayerItem(url: url)
+        player.replaceCurrentItem(with: playerItem)
+        player.play()
     }
     
     @IBAction func handleCurrentTimeSlider(_ sender: Any) {
@@ -39,6 +56,13 @@ class MusicStreamViewController: UIViewController {
     @IBAction func nextTrack(_ sender: Any) {
     }
     @IBAction func playPauseAction(_ sender: Any) {
+        if player.timeControlStatus == .paused {
+            player.play()
+            playPauseButton.setImage(UIImage(systemName: "pause"), for: .normal)
+        } else {
+            player.pause()
+            playPauseButton.setImage(UIImage(systemName: "play"), for: .normal)
+        }
     }
     
     func settings(){
