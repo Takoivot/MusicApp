@@ -226,6 +226,7 @@
                         <outlet property="currentTimeLabel" destination="Tpf-rj-Wnv" id="leK-b6-joU"/>
                         <outlet property="currentTimeSlider" destination="IOL-SX-f8b" id="hhQ-Gr-oyY"/>
                         <outlet property="durationTimeLabel" destination="VrI-UG-kLj" id="wgX-2g-vJ8"/>
+                        <outlet property="playPauseButton" destination="dmk-Dq-I50" id="fMK-ii-PKh"/>
                         <outlet property="trackImage" destination="W2t-qe-zKq" id="7VR-xD-XUc"/>
                         <outlet property="trackName" destination="JjG-J5-Tgf" id="2mR-0h-Ve9"/>
                         <outlet property="volumeSlider" destination="BMK-9U-daH" id="MJl-vc-7iD"/>
