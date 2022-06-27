@@ -40,28 +40,15 @@ class MusicListTableViewController: UITableViewController {
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let musicSVC = segue.destination as? MusicStreamViewController else {return}
+        guard let indexPath = tableView.indexPathForSelectedRow else {return}
+        guard let track = tracks?.results[indexPath.row] else {return}
+        musicSVC.track = track
+    }
+    
 }
 
-extension MusicListTableViewController {
-    /*
-     !!!!!! FOR DELETE !!!!!!!!
-     func fetchTracksFromNM(){
-        NetworkManager.shared.f { result in
-            switch result {
-            case .success(let tracks):
-                self.tracks = tracks
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
-            case .failure(let error):
-                print(error)
-            }
-        }
-    }
-     !!!!!! FOR DELETE !!!!!!!!
-     */
-   
-}
 
 extension MusicListTableViewController : UISearchBarDelegate{
     private func setupSearchBar() {
