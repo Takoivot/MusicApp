@@ -10,7 +10,6 @@ import UIKit
 class MusicListTableViewController: UITableViewController {
     
     var tracks: MusicModel? = nil
-    var favoriteTracks: [Track] = []
     
     let searchController = UISearchController(searchResultsController: nil)
     
@@ -58,9 +57,6 @@ class MusicListTableViewController: UITableViewController {
                 artwork: track?.artworkUrl60 ?? "",
                 preview: track?.previewUrl ?? ""
             )
-            let navVC = self.tabBarController?.viewControllers![1] as! UINavigationController
-            let favoriteVC = navVC.topViewController as! FavoritesTableViewController
-            favoriteVC.favoriteTracks = self.favoriteTracks
             actionPerformed(true)
         }
         favoriteAction.backgroundColor = UIColor.orange
