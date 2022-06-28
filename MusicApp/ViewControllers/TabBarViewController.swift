@@ -21,8 +21,8 @@ class TabBarViewController: UITabBarController, UITabBarControllerDelegate {
 extension TabBarViewController {
     
     private func setNewTabBar() {
-        let positionOnX: CGFloat = 10
-        let positionOnY: CGFloat = 14
+        let positionOnX: CGFloat = 9
+        let positionOnY: CGFloat = 8
         let width = tabBar.bounds.width - positionOnX * 2
         let height = tabBar.bounds.height + positionOnY * 2
         
