@@ -19,7 +19,6 @@ class MusicListTableViewController: UITableViewController {
         super.viewDidLoad()
         TableViewSettings.shared.tuneViewAppearance(for: tableView)
         NavBarSettings.shared.configureNavBar(for: navigationController)
-        //fetchTracksFromNM()
         setupSearchBar()
         
     }
@@ -45,6 +44,26 @@ class MusicListTableViewController: UITableViewController {
         guard let indexPath = tableView.indexPathForSelectedRow else {return}
         guard let track = tracks?.results[indexPath.row] else {return}
         musicSVC.track = track
+        
+        }
+    
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let favoriteAction = UIContextualAction(style: .normal, title: "Favorite") {
+            (_, _, actionPerformed: (Bool) -> ()) in
+            let track = self.tracks?.results[indexPath.row]
+            StorageManager.shared.save(
+                artistName: track?.artistName ?? "",
+                songName: track?.trackName ?? "",
+                artwork: track?.artworkUrl60 ?? "",
+                preview: track?.previewUrl ?? ""
+            )
+            actionPerformed(true)
+        }
+        favoriteAction.backgroundColor = UIColor.orange
+        favoriteAction.image = UIImage(systemName: "star")
+        let configuration = UISwipeActionsConfiguration(actions: [favoriteAction])
+        configuration.performsFirstActionWithFullSwipe = false
+        return configuration
     }
     
 }
