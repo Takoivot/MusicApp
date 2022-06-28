@@ -71,9 +71,16 @@ class MusicStreamViewController: UIViewController {
     }
     
     @IBAction func handleCurrentTimeSlider(_ sender: Any) {
+        let percentage = currentTimeSlider.value
+        guard let duration = player.currentItem?.duration else {return}
+        let durationInSecond = CMTimeGetSeconds(duration)
+        let seekTimeInSeconds = Float64(percentage) * durationInSecond
+        let seekTime = CMTimeMakeWithSeconds(seekTimeInSeconds, preferredTimescale: 1)
+        player.seek(to: seekTime)
     }
     
     @IBAction func handleVolumeSlider(_ sender: Any) {
+        player.volume = volumeSlider.value
     }
     @IBAction func previousTrack(_ sender: Any) {
     }
