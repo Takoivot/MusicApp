@@ -58,7 +58,7 @@ class MusicStreamViewController: UIViewController {
             
             let durationTime = self?.player.currentItem?.duration
             let currentDurationText = ((durationTime ?? CMTimeMake(value: 1, timescale: 1 )) - time).toDisplayToString()
-            self?.durationTimeLabel.text = "-\(currentDurationText)"
+            self?.durationTimeLabel.text = "\(currentDurationText)"
             self?.updateTimeSlider()
         }
     }
