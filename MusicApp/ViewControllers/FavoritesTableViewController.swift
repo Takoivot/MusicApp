@@ -9,7 +9,7 @@ import UIKit
 
 class FavoritesTableViewController: UITableViewController {
 
-    var favoriteTracks: [Tracks?] = []
+    var favoriteTracks: [Track] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +18,9 @@ class FavoritesTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        StorageManager.shared.fetchData { tracks in
+            favoriteTracks = tracks
+        }
         tableView.reloadData()
     }
     // MARK: - Table view data source
@@ -30,12 +33,30 @@ class FavoritesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "favorite", for: indexPath) as? FavoriteListViewCell else {return UITableViewCell()}
-        guard let track = favoriteTracks[indexPath.row] else {return UITableViewCell()}
+        let track = favoriteTracks[indexPath.row] 
         cell.settingsCell(with: track)
         TableViewSettings.shared.tuneCellAppearance(for: cell)
         return cell
     }
-
+    
+    override func tableView(
+        _ tableView: UITableView,
+        trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath
+    ) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") {
+            (_, _, actionPerformed: (Bool) -> ()) in
+            let track = self.favoriteTracks[indexPath.row]
+            StorageManager.shared.delete(track)
+            self.favoriteTracks.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            actionPerformed(true)
+        }
+        deleteAction.backgroundColor = UIColor.red
+        deleteAction.image = UIImage(systemName: "trash")
+        let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
+        configuration.performsFirstActionWithFullSwipe = false
+        return configuration
+}
 }
 
 

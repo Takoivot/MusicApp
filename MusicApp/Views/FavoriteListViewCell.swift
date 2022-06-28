@@ -13,14 +13,14 @@ class FavoriteListViewCell: UITableViewCell {
     @IBOutlet var favoriteArtistName: UILabel!
     @IBOutlet var favoriteSongName: UILabel!
     
-    func settingsCell(with track: Tracks ){
+    func settingsCell(with track: Track ){
         imageFavoriteSong.layer.cornerRadius = imageFavoriteSong.frame.height / 2
         imageFavoriteSong.contentMode = .scaleAspectFill
         imageFavoriteSong.layer.masksToBounds = true
         favoriteArtistName.text = track.artistName
         favoriteSongName.text = track.trackName
         
-        NetworkManager.shared.fetchImage(with: track) { result in
+        NetworkManager.shared.fetchImageCoreData(with: track) { result in
             switch result {
             case .success(let imageData):
                 DispatchQueue.main.async {

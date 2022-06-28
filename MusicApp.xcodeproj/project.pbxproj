@@ -10,6 +10,8 @@
 		91373EAF56103304D3C54DFA /* Pods_MusicApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C0B67B4E34559169AC635CB /* Pods_MusicApp.framework */; };
 		D54F6FF22862C9F700CCC0C9 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54F6FF12862C9F700CCC0C9 /* UIColorExtension.swift */; };
 		D54F6FF42863025400CCC0C9 /* FavoritesStreamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54F6FF32863025400CCC0C9 /* FavoritesStreamViewController.swift */; };
+		D55063A7286ABE74001F90D0 /* MusicApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D55063A5286ABE74001F90D0 /* MusicApp.xcdatamodeld */; };
+		D55063A9286ABEEC001F90D0 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D55063A8286ABEEC001F90D0 /* StorageManager.swift */; };
 		D585C14C28687CA0006CB842 /* NavBarSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D585C14B28687CA0006CB842 /* NavBarSettings.swift */; };
 		D585C152286882C3006CB842 /* TableViewSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D585C151286882C3006CB842 /* TableViewSettings.swift */; };
 		D58967212869E224000FDB60 /* FavoriteListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58967202869E224000FDB60 /* FavoriteListViewCell.swift */; };
@@ -33,6 +35,8 @@
 		77BCB2F22F8008C8DF360584 /* Pods-MusicApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicApp.debug.xcconfig"; path = "Target Support Files/Pods-MusicApp/Pods-MusicApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D54F6FF12862C9F700CCC0C9 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		D54F6FF32863025400CCC0C9 /* FavoritesStreamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesStreamViewController.swift; sourceTree = "<group>"; };
+		D55063A6286ABE74001F90D0 /* MusicApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MusicApp.xcdatamodel; sourceTree = "<group>"; };
+		D55063A8286ABEEC001F90D0 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		D585C14B28687CA0006CB842 /* NavBarSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarSettings.swift; sourceTree = "<group>"; };
 		D585C151286882C3006CB842 /* TableViewSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewSettings.swift; sourceTree = "<group>"; };
 		D58967202869E224000FDB60 /* FavoriteListViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListViewCell.swift; sourceTree = "<group>"; };
@@ -122,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				F36E621D285CA3C2002AD972 /* MusicModel.swift */,
+				D55063A5286ABE74001F90D0 /* MusicApp.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -130,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				F36E621F285CA3D5002AD972 /* NetworkManager.swift */,
+				D55063A8286ABEEC001F90D0 /* StorageManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -282,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D55063A9286ABEEC001F90D0 /* StorageManager.swift in Sources */,
 				D5FDFAD82861F1FC000BDD02 /* MusicStreamViewController.swift in Sources */,
 				D585C14C28687CA0006CB842 /* NavBarSettings.swift in Sources */,
 				F36E6220285CA3D5002AD972 /* NetworkManager.swift in Sources */,
@@ -297,6 +304,7 @@
 				F36E6208285CA1D9002AD972 /* SceneDelegate.swift in Sources */,
 				D54F6FF42863025400CCC0C9 /* FavoritesStreamViewController.swift in Sources */,
 				D54F6FF22862C9F700CCC0C9 /* UIColorExtension.swift in Sources */,
+				D55063A7286ABE74001F90D0 /* MusicApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,6 +520,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D55063A5286ABE74001F90D0 /* MusicApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D55063A6286ABE74001F90D0 /* MusicApp.xcdatamodel */,
+			);
+			currentVersion = D55063A6286ABE74001F90D0 /* MusicApp.xcdatamodel */;
+			path = MusicApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F36E61FA285CA1D9002AD972 /* Project object */;
 }

@@ -10,7 +10,7 @@ import UIKit
 class MusicListTableViewController: UITableViewController {
     
     var tracks: MusicModel? = nil
-    var favoriteTracks: [Tracks?] = []
+    var favoriteTracks: [Track] = []
     
     let searchController = UISearchController(searchResultsController: nil)
     
@@ -52,7 +52,12 @@ class MusicListTableViewController: UITableViewController {
         let favoriteAction = UIContextualAction(style: .normal, title: "Favorite") {
             (_, _, actionPerformed: (Bool) -> ()) in
             let track = self.tracks?.results[indexPath.row]
-            self.favoriteTracks.append(track)
+            StorageManager.shared.save(
+                artistName: track?.artistName ?? "",
+                songName: track?.trackName ?? "",
+                artwork: track?.artworkUrl60 ?? "",
+                preview: track?.previewUrl ?? ""
+            )
             let navVC = self.tabBarController?.viewControllers![1] as! UINavigationController
             let favoriteVC = navVC.topViewController as! FavoritesTableViewController
             favoriteVC.favoriteTracks = self.favoriteTracks
