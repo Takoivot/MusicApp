@@ -20,10 +20,8 @@ class MusicListTableViewController: UITableViewController {
         TableViewSettings.shared.tuneViewAppearance(for: tableView)
         NavBarSettings.shared.configureNavBar(for: navigationController)
         setupSearchBar()
-        
     }
-    
-    
+
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

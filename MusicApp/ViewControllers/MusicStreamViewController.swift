@@ -7,6 +7,7 @@
 
 import UIKit
 import AVKit
+import SDWebImage
 
 
 class MusicStreamViewController: UIViewController {
@@ -41,6 +42,9 @@ class MusicStreamViewController: UIViewController {
         artistName.text = track?.artistName
         trackName.text = track?.trackName
         observePlayerCurrentTime()
+        let updateSizeImage = track?.artworkUrl60?.replacingOccurrences(of: "60x60", with: "600x600")
+        guard let url = URL(string: updateSizeImage ?? "") else {return}
+        trackImage.sd_setImage(with: url)
     }
     
     private func playTrack(previewUrl: String? ) {
@@ -83,6 +87,7 @@ class MusicStreamViewController: UIViewController {
         player.volume = volumeSlider.value
     }
     @IBAction func previousTrack(_ sender: Any) {
+        
     }
     @IBAction func nextTrack(_ sender: Any) {
     }
