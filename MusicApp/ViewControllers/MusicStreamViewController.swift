@@ -27,7 +27,7 @@ class MusicStreamViewController: UIViewController {
         avPlayer.automaticallyWaitsToMinimizeStalling = false
         return avPlayer
     }()
-    
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = #colorLiteral(red: 0.9254901961, green: 0.8352941176, blue: 0.7333333333, alpha: 1)
