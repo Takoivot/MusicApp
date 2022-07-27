@@ -15,6 +15,7 @@ class MusicListTableViewController: UITableViewController {
     
     private var timer: Timer?
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         TableViewSettings.shared.tuneViewAppearance(for: tableView)
@@ -23,7 +24,6 @@ class MusicListTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         tracks?.results.count ?? 0
     }

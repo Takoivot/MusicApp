@@ -31,7 +31,7 @@ class MusicStreamViewController: UIViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = #colorLiteral(red: 0.9254901961, green: 0.8352941176, blue: 0.7333333333, alpha: 1)
+        view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         NavBarSettings.shared.configureNavBar(for: navigationController)
         playTrack(previewUrl: track?.previewUrl)
         settings()
@@ -46,6 +46,7 @@ class MusicStreamViewController: UIViewController {
         guard let url = URL(string: updateSizeImage ?? "") else {return}
         trackImage.sd_setImage(with: url)
     }
+    
     
     private func playTrack(previewUrl: String? ) {
         guard let url = URL(string: previewUrl ?? "") else {return}

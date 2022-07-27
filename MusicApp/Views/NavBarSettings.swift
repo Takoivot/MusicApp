@@ -18,7 +18,7 @@ class NavBarSettings {
             return
         }
         let appearance = UINavigationBarAppearance()
-        appearance.backgroundColor = #colorLiteral(red: 0.6174336672, green: 0.6075100303, blue: 0.5990644097, alpha: 1)
+        appearance.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         appearance.titleTextAttributes = [.foregroundColor: UIColor.black]
         appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.black]
         navigationController.navigationBar.standardAppearance = appearance
