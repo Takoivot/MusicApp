@@ -220,7 +220,7 @@
                             <constraint firstItem="1vn-fo-6Z4" firstAttribute="trailing" secondItem="FSR-tb-Vm0" secondAttribute="trailing" constant="30" id="wlN-lh-mP6"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="FWi-TU-ZwL"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="FWi-TU-ZwL"/>
                     <connections>
                         <outlet property="artistName" destination="phS-Rn-Nro" id="FI4-Mc-fpo"/>
                         <outlet property="currentTimeLabel" destination="Tpf-rj-Wnv" id="leK-b6-joU"/>
@@ -292,7 +292,7 @@
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iHW-QS-szj">
                                             <rect key="frame" x="5" y="5" width="310" height="89"/>
-                                            <color key="backgroundColor" red="0.6470588235294118" green="0.77254901960784317" blue="0.76078431372549016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" systemColor="systemGray5Color"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <integer key="value" value="20"/>
