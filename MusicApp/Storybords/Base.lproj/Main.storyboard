@@ -98,7 +98,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="FSR-tb-Vm0">
-                                <rect key="frame" x="30" y="44" width="260" height="460"/>
+                                <rect key="frame" x="30" y="49" width="260" height="460"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="W2t-qe-zKq">
                                         <rect key="frame" x="0.0" y="0.0" width="260" height="260"/>
@@ -214,9 +214,9 @@
                         <viewLayoutGuide key="safeArea" id="1vn-fo-6Z4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="1vn-fo-6Z4" firstAttribute="bottom" secondItem="FSR-tb-Vm0" secondAttribute="bottom" constant="15" id="3e3-af-sb5"/>
+                            <constraint firstItem="FSR-tb-Vm0" firstAttribute="top" secondItem="1vn-fo-6Z4" secondAttribute="top" constant="5" id="72k-GL-dCQ"/>
                             <constraint firstItem="FSR-tb-Vm0" firstAttribute="leading" secondItem="1vn-fo-6Z4" secondAttribute="leading" constant="30" id="FIF-kl-eKD"/>
-                            <constraint firstItem="FSR-tb-Vm0" firstAttribute="top" secondItem="1vn-fo-6Z4" secondAttribute="top" id="iSy-KU-i42"/>
+                            <constraint firstItem="1vn-fo-6Z4" firstAttribute="bottom" secondItem="FSR-tb-Vm0" secondAttribute="bottom" constant="10" id="dmP-Zg-h5F"/>
                             <constraint firstItem="1vn-fo-6Z4" firstAttribute="trailing" secondItem="FSR-tb-Vm0" secondAttribute="trailing" constant="30" id="wlN-lh-mP6"/>
                         </constraints>
                     </view>
