@@ -74,7 +74,7 @@
                                     <outlet property="artistName" destination="4ki-ip-qt3" id="1BJ-IN-uee"/>
                                     <outlet property="imageSong" destination="XIU-eE-Gj4" id="IuR-2S-Tpn"/>
                                     <outlet property="songName" destination="qwm-nC-cqe" id="xoO-Ab-eni"/>
-                                    <segue destination="fre-BL-Nj2" kind="show" id="1bt-dn-sVo"/>
+                                    <segue destination="fre-BL-Nj2" kind="show" identifier="m" id="1bt-dn-sVo"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

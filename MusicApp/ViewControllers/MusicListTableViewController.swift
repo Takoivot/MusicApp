@@ -9,12 +9,13 @@ import UIKit
 
 class MusicListTableViewController: UITableViewController {
     
-    var tracks: MusicModel? = nil
+    var tracks = [Tracks]()
+    
     
     let searchController = UISearchController(searchResultsController: nil)
     
     private var timer: Timer?
-    
+    var currentIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,22 +26,23 @@ class MusicListTableViewController: UITableViewController {
 
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        tracks?.results.count ?? 0
+        tracks.count
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "music", for: indexPath) as? MusicListViewCell else {return UITableViewCell()}
-        guard let track = tracks?.results[indexPath.row] else {return UITableViewCell()}
+        let track = tracks[indexPath.row]
         cell.settingsCell(with: track)
         TableViewSettings.shared.tuneCellAppearance(for: cell)
         return cell
     }
+  
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let musicSVC = segue.destination as? MusicStreamViewController else {return}
         guard let indexPath = tableView.indexPathForSelectedRow else {return}
-        guard let track = tracks?.results[indexPath.row] else {return}
+        let track = tracks[indexPath.row]
         musicSVC.track = track
         
         }
@@ -48,12 +50,12 @@ class MusicListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let favoriteAction = UIContextualAction(style: .normal, title: "Favorite") {
             (_, _, actionPerformed: (Bool) -> ()) in
-            let track = self.tracks?.results[indexPath.row]
+            let track = self.tracks[indexPath.row]
             StorageManager.shared.save(
-                artistName: track?.artistName ?? "",
-                songName: track?.trackName ?? "",
-                artwork: track?.artworkUrl60 ?? "",
-                preview: track?.previewUrl ?? ""
+                artistName: track.artistName ,
+                songName: track.trackName ,
+                artwork: track.artworkUrl60 ?? "",
+                preview: track.previewUrl ?? ""
             )
             actionPerformed(true)
         }
@@ -78,16 +80,9 @@ extension MusicListTableViewController : UISearchBarDelegate{
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         timer?.invalidate()
         timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false, block: { _ in
-            NetworkManager.shared.fetchTracksAF(searchText: searchText) {result in
-                switch result {
-                case .success(let tracks):
-                    self.tracks = tracks
-                    DispatchQueue.main.async {
-                        self.tableView.reloadData()
-                    }
-                case .failure(let error):
-                    print(error)
-                }
+            NetworkManager.shared.fetchTracksAF(searchText: searchText) { res in
+                self.tracks = res?.results ?? []
+                self.tableView.reloadData()
             }
         })
       

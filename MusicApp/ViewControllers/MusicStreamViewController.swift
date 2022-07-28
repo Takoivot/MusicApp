@@ -14,6 +14,7 @@ class MusicStreamViewController: UIViewController {
     
     var track: Tracks?
     
+    
     @IBOutlet weak var trackImage: UIImageView!
     @IBOutlet weak var currentTimeSlider: UISlider!
     @IBOutlet weak var currentTimeLabel: UILabel!
@@ -88,7 +89,7 @@ class MusicStreamViewController: UIViewController {
         player.volume = volumeSlider.value
     }
     @IBAction func previousTrack(_ sender: Any) {
-        
+    
     }
     @IBAction func nextTrack(_ sender: Any) {
     }

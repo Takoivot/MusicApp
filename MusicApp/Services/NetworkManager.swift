@@ -49,7 +49,7 @@ class NetworkManager {
         }
     }
     
-    func fetchTracksAF(searchText: String, completion: @escaping (Result<MusicModel,NetworkError>) -> Void){
+    func fetchTracksAF(searchText: String, completion: @escaping (MusicModel?) -> Void){
         let url = "https://itunes.apple.com/search"
         let parameters = [
             "term":"\(searchText)",
@@ -60,7 +60,7 @@ class NetworkManager {
         AF.request(url, method: .get, parameters: parameters, encoding: URLEncoding.default, headers: nil).responseData { (dataResponse) in
             if let error = dataResponse.error {
                 print(error.localizedDescription)
-                completion(.failure(.invalidData))
+                //completion(.failure(.invalidData))
                 return
             }
             
@@ -68,11 +68,13 @@ class NetworkManager {
             
             do{
                 let track = try JSONDecoder().decode(MusicModel.self, from: data)
-                completion(.success(track))
+                //completion(.success(track))
+                completion(track)
                 print(track)
             } catch let error{
                 print(error.localizedDescription)
-                completion(.failure(.decodeError))
+                //completion(.failure(.decodeError))
+                
             }
         }
     }
