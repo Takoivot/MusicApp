@@ -80,8 +80,8 @@ extension MusicListTableViewController : UISearchBarDelegate{
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         timer?.invalidate()
         timer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false, block: { _ in
-            NetworkManager.shared.fetchTracksAF(searchText: searchText) { res in
-                self.tracks = res?.results ?? []
+            NetworkManager.shared.fetchTracksAF(searchText: searchText) { result in
+                self.tracks = result?.results ?? []
                 self.tableView.reloadData()
             }
         })
